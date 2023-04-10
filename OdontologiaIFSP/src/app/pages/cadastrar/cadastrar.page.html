@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Cadastre-se</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img src="../../../assets/icon/cadastro.png" style="margin-top: 20px; width: 187px; margin-left: auto; margin-right: auto"></ion-img>
+
+  <ion-item>
+    <ion-title>Dados do Aluno</ion-title>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome do aluno</ion-label>
+      <ion-input [(ngModel)]="nome" name="nome" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Matrícula</ion-label>
+      <ion-input [(ngModel)]="nome" name="nome" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Celular</ion-label>
+      <ion-input [(ngModel)]="celular" name="celular" required (ngModelChange)="formatarTelefone()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">E-mail acadêmico</ion-label>
+      <ion-input [(ngModel)]="email" name="email" required type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input [(ngModel)]="senha" name="senha" required type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="tertiary" expand="block" (click)="save()">Enviar</ion-button>
+
+</ion-content>

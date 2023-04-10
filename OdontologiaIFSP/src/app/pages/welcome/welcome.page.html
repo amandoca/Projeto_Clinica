@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+
+    <ion-menu contentId="main-content">
+        <ion-menu-toggle style="display: flex; flex-direction: column;">
+            <ion-button routerLink="/welcome" color="tertiary">Início</ion-button>
+            <ion-button routerLink="/servicos" color="tertiary">Tratamentos</ion-button>
+            <ion-button routerLink="/agendamentos" color="tertiary">Marcar atendimento</ion-button>
+            <ion-button routerLink="/sobre" color="tertiary">Sobre nós</ion-button>
+            <ion-button routerLink="/contato" color="tertiary">Contato</ion-button>
+        </ion-menu-toggle>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+        <ion-header>
+            <ion-toolbar color="tertiary">
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>Clínica Odontológica</ion-title>
+            </ion-toolbar>
+        </ion-header>
+    </div>
+    <img src="../../../assets/icon/logo.jpg">
+
+    <ion-footer>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-button (click)="move('login')" style="background-color: black; color: #fff;" expand="block" fill="clear">Entrar</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button (click)="move('cadastrar')" style="background-color: black; color: #fff;" expand="block" fill="clear">Cadastrar</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-footer>
+
+</ion-content>

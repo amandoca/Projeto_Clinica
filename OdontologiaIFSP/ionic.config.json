@@ -1,0 +1,7 @@
+{
+  "name": "fisioterapia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

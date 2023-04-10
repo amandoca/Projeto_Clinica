@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Marcar atendimento</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img src="../../../assets/icon/agendar.png"
+    style="margin-top: 20px; width: 187px; margin-left: auto; margin-right: auto;"></ion-img>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input name="nome" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Matrícula</ion-label>
+      <ion-input name="email" required type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Procedimento</ion-label>
+      <ion-select interface="action-sheet" placeholder="Procedimento" cancelText="Cancelar" [(ngModel)]="procedimento">
+        <ion-select-option *ngFor="let procedimento of procedimentos" [value]="procedimento">{{ procedimento }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data e horário</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-datetime display-format="DD/MM/YYYY HH:mm" picker-format="DD MMMM YYYY HH:mm"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="tertiary" expand="block" (click)="agendar()">Marcar</ion-button>
+</ion-content>
